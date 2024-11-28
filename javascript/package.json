@@ -1,7 +1,7 @@
 {
-  "name": "aoc2023",
+  "name": "aocjavascript",
   "version": "1.0.0",
-  "description": "Advent of Code 2023 - solutions",
+  "description": "Advent of Code javascript - solutions",
   "type": "module",
   "dependencies": {
     "minimist": "^1.2.8"
