@@ -1,4 +1,6 @@
 input.txt
 input2.txt
 
+.env
+
 node_modules/

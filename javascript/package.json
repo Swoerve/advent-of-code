@@ -4,6 +4,7 @@
   "description": "Advent of Code javascript - solutions",
   "type": "module",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "minimist": "^1.2.8"
   }
 }
