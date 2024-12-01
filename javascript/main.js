@@ -33,21 +33,23 @@ let dirs = fs.readdirSync(`${__dirname}/${year}`)
 //console.log(dirs)
 
 // loop through all days dirs and import their functions
-const days = {}
-for(const day of dirs){
-  days[day] = await import(`./${year}/${day}/index.js`)
-}
+
 
 //console.log(days)
 
 
 // if we have -d and -p
 if(argv.get && argv.day){
+  console.log("Getting day")
   await getDayInput()
 }else if(argv.day && argv.part){
-  //console.log("all entered")
+  console.log("day choice")
+  const days = {}
+  for(const day of dirs){
+    days[day] = await import(`./${year}/${day}/index.js`)
+  } 
   const result = days[argv.day][`part${argv.part}`]()
-  console.log(`${year}/${argv.day} (part ${argv.part}) result: ${result}`)
+  console.log(`${year}/${argv.day} (part ${argv.part}) result: \n${result}`)
 } else if (argv.help) { // if we have -h
   console.log("| Usage: node main.js -y [year] -d [day] -p [1/2]")
 } else { // if we have no args send generic -h message
