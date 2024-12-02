@@ -13,7 +13,7 @@ export function part1(){
   return something
 }
 
-export function part1(){
+export function part2(){
   let something = read()
   return something
 }
